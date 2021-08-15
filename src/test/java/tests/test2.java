@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.Activity;
 
-public class test2 {
+public class test2 extends BaseClass{
 
 	
 	
