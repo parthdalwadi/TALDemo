@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-08-15T18:11:05 EDT" name="SampleSuiteName" finished-at="2021-08-15T18:11:05 EDT" duration-ms="153">
+    <groups>
+    </groups>
+    <test started-at="2021-08-15T18:11:05 EDT" name="SampleTEstName" finished-at="2021-08-15T18:11:05 EDT" duration-ms="153">
+      <class name="tests.test3">
+        <test-method signature="t3()[pri:0, instance:tests.test3@47db50c5]" started-at="2021-08-15T18:11:05 EDT" name="t3" finished-at="2021-08-15T18:11:05 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t3 -->
+      </class> <!-- tests.test3 -->
+      <class name="tests.test1">
+        <test-method signature="t1()[pri:0, instance:tests.test1@782663d3]" started-at="2021-08-15T18:11:05 EDT" name="t1" finished-at="2021-08-15T18:11:05 EDT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t1 -->
+      </class> <!-- tests.test1 -->
+      <class name="tests.test2">
+        <test-method signature="t2()[pri:0, instance:tests.test2@67b467e9]" started-at="2021-08-15T18:11:05 EDT" name="t2" finished-at="2021-08-15T18:11:05 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t2 -->
+      </class> <!-- tests.test2 -->
+    </test> <!-- SampleTEstName -->
+  </suite> <!-- SampleSuiteName -->
+</testng-results>
