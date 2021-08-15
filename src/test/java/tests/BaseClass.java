@@ -2,6 +2,7 @@ package tests;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -32,8 +33,8 @@ public class BaseClass {
 		//dc.setCapability(MobileCapabilityType.UDID, "4aa1050c");
 		
 		//dc.setCapability(MobileCapabilityType.APP, "/Users/parthdalwadi/eclipse-workspace1/Appium_Mobile_Test/APKFile/scene.apk");
-		dc.setCapability("appPackage", "com.sumanthakkala.medialines");
 		
+		dc.setCapability("appPackage", "com.sumanthakkala.medialines");
 		dc.setCapability("appActivity", "com.sumanthakkala.medialines.activities.SplashActivity");
 //		
 		//dc.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
@@ -48,12 +49,25 @@ public class BaseClass {
 		URL url = new URL("http://0.0.0.0:4723/wd/hub");
 		
 		
-		 driver = new AppiumDriver<MobileElement>(url, dc); 
+		driver = new AppiumDriver<MobileElement>(url, dc); 
 		 
-		 System.out.println("New test started");
-		 
+		System.out.println("New test started");
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//driver = new AppiumDriver<MobileElement>(url,dc);
+		
+		
+		// Going to the Main Activity
+		MobileElement nextBtn =  driver.findElementById("com.sumanthakkala.medialines:id/onboardingActionButton");
+		while(nextBtn.getText().equals("NEXT"))
+		{
+			System.out.println("next btn clicked..."+ nextBtn.getText());
+			nextBtn.click();
+			
+		}
+		
+		MobileElement skipBtn =  driver.findElementById("com.sumanthakkala.medialines:id/onboardingSkipActionButton");
+		skipBtn.click();
 		
 		
 	}
@@ -65,7 +79,7 @@ public class BaseClass {
 	public void teardown() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.quit();
-		 System.out.println("test finished");
+		 System.out.println("Test finished");
 	}
 	
 
