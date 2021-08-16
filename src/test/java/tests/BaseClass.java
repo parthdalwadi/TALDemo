@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -19,18 +21,19 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class BaseClass {
 	
 	
-	public AppiumDriver<MobileElement> driver;
+	public static AppiumDriver<MobileElement> driver;
+	public static int sv;
 	
 	@BeforeTest
 	public void setup() throws MalformedURLException {
 		
-		
+		sv  = 5;
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
 		dc.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		dc.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10");
 		dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
-		//dc.setCapability(MobileCapabilityType.UDID, "4aa1050c");
+		
 		
 		//dc.setCapability(MobileCapabilityType.APP, "/Users/parthdalwadi/eclipse-workspace1/Appium_Mobile_Test/APKFile/scene.apk");
 		
@@ -75,11 +78,12 @@ public class BaseClass {
 	
 	
 	 
-	@AfterTest
+	@AfterSuite
 	public void teardown() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.quit();
-		 System.out.println("Test finished");
+		
+	
+		 System.out.println("All Test finished");
 	}
 	
 

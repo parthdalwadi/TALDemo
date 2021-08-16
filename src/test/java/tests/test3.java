@@ -19,7 +19,7 @@ public class test3 extends BaseClass {
 	@Test
 	public void t3() {
 		Assert.assertTrue(true);
-		System.out.println("t2 called ...");
+		System.out.println("t3 called ...");
 	}
 	
 	

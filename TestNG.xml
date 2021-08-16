@@ -8,16 +8,21 @@
 </listeners>
 
 
-	<test name="SampleTEstName">
+	<test name="SampleTEstName1">
 		
 		
 		<classes>
-			<class name="tests.test1"/>
-			<class name="tests.test2"/>
-			<class name="tests.test3"/>
+			
+			<class name="tests.CreateNote"/>  
+			
+			
+			<class name="tests.UpdateNote"/>
 			
 		</classes>
 	
 	</test>
+	
+	
+	
 
 </suite>
