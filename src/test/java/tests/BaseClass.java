@@ -56,7 +56,7 @@ public class BaseClass {
 		 
 		System.out.println("New test started");
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		
 		

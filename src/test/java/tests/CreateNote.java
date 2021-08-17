@@ -18,7 +18,7 @@ public class CreateNote extends BaseClass {
 	
 	
 	@Test
-	public void t1() {
+	public void newNote() {
 		
 		
 		System.out.println(sv);
@@ -33,7 +33,7 @@ public class CreateNote extends BaseClass {
 		
 		
 		MobileElement title = (MobileElement) driver.findElementById("com.sumanthakkala.medialines:id/inputNoteTitle");
-		title.click();
+		
 		title.sendKeys("TestNote1");
 		
 		MobileElement content = (MobileElement) driver.findElementById("com.sumanthakkala.medialines:id/inputNoteText");

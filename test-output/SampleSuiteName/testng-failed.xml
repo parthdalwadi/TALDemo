@@ -6,20 +6,13 @@
   </listeners>
   <test thread-count="5" name="SampleTEstName1(failed)">
     <classes>
-      <class name="tests.CreateNote">
+      <class name="tests.saveNoteAsPDF">
         <methods>
           <include name="teardown"/>
+          <include name="exportPdf"/>
           <include name="setup"/>
-          <include name="t1"/>
         </methods>
-      </class> <!-- tests.CreateNote -->
-      <class name="tests.UpdateNote">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="t2"/>
-        </methods>
-      </class> <!-- tests.UpdateNote -->
+      </class> <!-- tests.saveNoteAsPDF -->
     </classes>
   </test> <!-- SampleTEstName1(failed) -->
 </suite> <!-- Failed suite [SampleSuiteName] -->

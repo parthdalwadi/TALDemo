@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.UpdateNote">
+      <class name="tests.saveNoteAsPDF">
         <methods>
           <include name="teardown"/>
+          <include name="exportPdf"/>
           <include name="setup"/>
-          <include name="t2"/>
         </methods>
-      </class> <!-- tests.UpdateNote -->
+      </class> <!-- tests.saveNoteAsPDF -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

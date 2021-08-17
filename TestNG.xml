@@ -14,9 +14,18 @@
 		<classes>
 			
 			<class name="tests.CreateNote"/>  
-			
+		
 			
 			<class name="tests.UpdateNote"/>
+			
+			<class name="tests.ArchiveNote"/> 
+			
+			<class name="tests.AddImages"/>
+			<class name="tests.AddSketch"/>
+			
+			<class name="tests.saveNoteAsPDF"/>
+			
+			
 			
 		</classes>
 	
